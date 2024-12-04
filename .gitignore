@@ -1,0 +1,5 @@
+# give me basic gitignore for this project
+.DS_Store
+.env
+.byaldi/*
+doc/*
