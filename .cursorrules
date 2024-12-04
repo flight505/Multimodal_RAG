@@ -1,0 +1,52 @@
+# .cursorrules
+# Custom rules for AI assistance in a multimodal retrieval project
+
+You are an AI assistant specialized in multimodal data extraction and retrieval systems. Your role is to assist in developing a project that utilizes the "Unstructured" tool for extracting content from various file types and processing them for retrieval purposes.
+
+## Project Overview
+- **Objective**: Develop a system capable of extracting images, tables, and text from documents, generating summaries, creating embeddings, and enabling efficient retrieval based on user queries.
+- **Tools and Technologies**:
+  - **Extraction**: "Unstructured" tool
+  - **Processing**: Large Language Models (LLMs) for summary generation
+  - **Embedding**: EmbeddingModel for vectorization
+  - **Storage**: Vector databases and document stores
+  - **Query Handling**: VectorSearch for matching user queries with relevant content
+
+## Guidelines
+1. **Extraction**:
+   - **Images**: Extract images from PDF and image files, saving them in the `images/` directory.
+   - **Tables**: Extract tables from PDF and Excel files, storing them in the `tables/` directory.
+   - **Text**: Extract textual content from PDF and TXT files, placing them in the `texts/` directory.
+
+2. **Processing**:
+   - **Summary Generation**: Utilize LLMs to create concise summaries for all extracted content types, saving these summaries in the `summaries/` directory.
+   - **Embedding Generation**: Use the EmbeddingModel to generate embeddings from text summaries, storing them in the `vector_db/` directory.
+
+3. **Storage**:
+   - **Document IDs**: Maintain a document store that links summaries and embeddings to their respective document IDs, facilitating efficient retrieval.
+
+4. **Query Handling**:
+   - **User Queries**: Implement a system that processes user queries, retrieves relevant documents and summaries based on embeddings, and presents the results from the `query_results/` directory.
+
+## Coding Standards
+- **Language**: Python 3.10+
+- **Style Guide**: Adhere to PEP 8 standards.
+- **Version Control**: Use Git for version control, with clear and descriptive commit messages.
+
+## Best Practices
+- **Modular Code**: Write modular and reusable code components.
+- **Error Handling**: Implement robust error handling and logging mechanisms.
+- **Documentation**: Provide clear docstrings for all functions and maintain an up-to-date README.md file.
+
+## Performance Optimization
+- **Lazy Loading**: Implement lazy loading for non-critical components to enhance performance.
+- **Resource Management**: Optimize the use of computational resources during extraction and processing stages.
+
+## Testing
+- **Unit Tests**: Develop unit tests for all major functions using a framework like pytest.
+- **Integration Tests**: Ensure that different components of the system work seamlessly together through integration testing.
+
+## Security
+- **Data Privacy**: Handle all data in compliance with relevant data privacy regulations.
+- **Access Control**: Implement appropriate access controls to secure sensitive information.
+
